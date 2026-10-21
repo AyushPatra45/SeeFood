@@ -30,3 +30,7 @@ Desktop browser behavior was inspected directly. Responsive CSS is included, but
 ## Docker
 
 The final Docker image built successfully and passed a real HTTP smoke check on **Linux ARM64**, using Python 3.12.15, PyTorch 2.14.1+cpu, and torchvision 0.29.1+cpu. Verified model readiness, frontend, metrics, plot delivery, hotdog prediction plus Grad-CAM, the cat-image uncertainty warning, corrupt-file HTTP 422, and invalid-MIME HTTP 415. The test container was stopped afterward. See `reports/container_smoke.json` for the actual responses. Other container architectures and public hosting providers have not been tested.
+
+## Connection recovery fix
+
+An open page originally retained a stale model-ready state after its local backend stopped, and a prediction displayed the browser's raw “Failed to fetch” message. The frontend now polls readiness, disables predictions while offline, shows actionable recovery instructions, and automatically clears connection errors after recovery. `start.command` provides a macOS launcher that keeps the server in the user's Terminal window. Verified the ready → offline → ready transition against an isolated local server without reloading the page or interrupting the primary app. The existing 23 Python tests still pass, and JavaScript and launcher syntax checks pass. Additional user-supplied screenshot tiles and cropped photos were inspected locally; those image assets are not published in the repository.

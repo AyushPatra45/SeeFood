@@ -25,6 +25,8 @@ Windows activation: `.venv\Scripts\activate`. If Python 3.12 is your default int
 
 Open **http://127.0.0.1:8000**. Upload a JPEG, PNG, or WebP image, optionally enable Grad-CAM, then click **Is it a hotdog?** The interface includes loading, error, unavailable-model, and close-call states. API documentation is at **http://127.0.0.1:8000/docs**.
 
+**Keep the server running while using the page.** An already-open page can still show its interface after the server stops, but predictions require the backend. On macOS, double-click `start.command` to start it in your own Terminal window. The page checks connectivity every five seconds, disables prediction when offline, and reconnects automatically without losing the selected image. If port 8000 is already serving SeeFood, reuse that server instead of starting a second one.
+
 The server loads the model once and runs inference on CPU, so a GPU is not needed. Uploads are limited to 8 MiB and 16 megapixels. Image content is decoded and checked, not trusted based on its filename. The application does not retain uploads; the multipart library may temporarily spool larger uploads to disk before the file is closed at request completion.
 
 ### Download trained weights directly

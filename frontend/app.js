@@ -4,11 +4,21 @@ let selectedFile = null;
 let previewURL = null;
 let activeRequest = null;
 let modelReady = false;
+let errorKind = "";
+let checkingHealth = false;
 const percent = (value) => `${(value * 100).toFixed(1)}%`;
 
-function errorMessage(message) {
+function errorMessage(message, kind = "input") {
   $("error").textContent = message;
   $("error").hidden = !message;
+  errorKind = message ? kind : "";
+}
+
+function readiness(ready) {
+  modelReady = ready;
+  $("model-status").classList.toggle("ready", ready);
+  $("model-status").classList.toggle("error", !ready);
+  $("predict-button").disabled = !ready || !selectedFile || !!activeRequest;
 }
 
 function resetResult() {
@@ -89,7 +99,7 @@ $("predict-button").addEventListener("click", async () => {
   busy(true);
   try {
     const response = await fetch("/predict", { method: "POST", body: form, signal: controller.signal });
-    const result = await response.json();
+    const result = await response.json().catch(() => { throw new Error("The server returned an unreadable response. Please retry."); });
     if (!response.ok) throw new Error(typeof result.detail === "string" ? result.detail : "The image could not be processed.");
     if (activeRequest !== controller) return;
     $("result-empty").hidden = true;
@@ -106,7 +116,13 @@ $("predict-button").addEventListener("click", async () => {
     $("inference-time").textContent = `${result.inference_ms.toFixed(0)} ms${result.gradcam ? " incl. explanation" : " inference"}`;
   } catch (error) {
     if (activeRequest === controller && error.name !== "AbortError") {
-      errorMessage(error.message || "Unable to connect. Check that the API is running.");
+      if (error instanceof TypeError) {
+        readiness(false);
+        $("status-text").textContent = "API offline";
+        errorMessage("Cannot reach SeeFood. Start the local server with start.command, then retry. This page reconnects automatically.", "connection");
+      } else {
+        errorMessage(error.message || "The image could not be processed. Please retry.", "prediction");
+      }
       $("result-state").textContent = "PLEASE TRY AGAIN";
     }
   } finally {
@@ -115,20 +131,31 @@ $("predict-button").addEventListener("click", async () => {
 });
 
 async function loadStatus() {
+  if (checkingHealth || activeRequest) return;
+  checkingHealth = true;
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), 4000);
   try {
-    const response = await fetch("/health");
+    const response = await fetch("/health", { signal: controller.signal, cache: "no-store" });
     if (!response.ok) throw new Error("Health check failed");
     const health = await response.json();
-    modelReady = health.model_loaded;
-    $("model-status").classList.toggle("ready", modelReady);
-    $("model-status").classList.toggle("error", !modelReady);
+    const wasReady = modelReady;
+    readiness(health.model_loaded === true);
     $("status-text").textContent = modelReady ? "Model ready" : "Model unavailable";
-    $("predict-button").disabled = !modelReady || !selectedFile;
-    if (!modelReady) errorMessage("Model weights are missing. Follow the README to train or download them, then restart the server.");
+    if (!modelReady) errorMessage("Model weights are missing. Follow the README to train or download them, then restart the server.", "model");
+    else {
+      if (["connection", "model"].includes(errorKind)) errorMessage("");
+      if (!wasReady) loadMetrics();
+    }
   } catch {
+    readiness(false);
     $("status-text").textContent = "API offline";
-    $("model-status").classList.add("error");
-    errorMessage("Cannot reach the API. Start the application using the README instructions.");
+    if (!errorKind || errorKind === "connection") {
+      errorMessage("Cannot reach SeeFood. Start the local server with start.command. This page reconnects automatically.", "connection");
+    }
+  } finally {
+    clearTimeout(timeout);
+    checkingHealth = false;
   }
 }
 
@@ -145,3 +172,6 @@ async function loadMetrics() {
 }
 loadStatus();
 loadMetrics();
+setInterval(() => { if (!document.hidden) loadStatus(); }, 5000);
+window.addEventListener("focus", loadStatus);
+window.addEventListener("online", loadStatus);
