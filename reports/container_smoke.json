@@ -1,0 +1,62 @@
+{
+  "status": "passed",
+  "platform": "Linux ARM64 Docker CPU",
+  "versions": {
+    "python": "3.12.15",
+    "torch": "2.14.1+cpu",
+    "torchvision": "0.29.1+cpu"
+  },
+  "health": {
+    "status": "ready",
+    "model_loaded": true
+  },
+  "model": {
+    "architecture": "MobileNetV2",
+    "class_to_idx": {
+      "not_hot_dog": 0,
+      "hot_dog": 1
+    },
+    "threshold": 0.15000000000000002,
+    "image_size": 224,
+    "best_stage": "finetune",
+    "best_epoch": 2
+  },
+  "test_accuracy": 0.874,
+  "predictions": {
+    "hotdog": {
+      "label": "Hotdog!",
+      "class_name": "hot_dog",
+      "probability_hot_dog": 0.9958915710449219,
+      "confidence": 0.9958915710449219,
+      "threshold": 0.15000000000000002,
+      "uncertain": false,
+      "binary_entropy_nats": 0.02667462223049833,
+      "uncertainty_reasons": [],
+      "gradcam": {
+        "image": "[PNG verified; base64 omitted from report]",
+        "target": "hot_dog",
+        "note": "Highlights regions influencing the predicted class on the model's 224px center crop; not a segmentation or proof of reasoning."
+      },
+      "inference_ms": 142.58,
+      "confidence_note": "Model score, not a calibrated guarantee. Unfamiliar images may still receive high confidence."
+    },
+    "cat": {
+      "label": "Hotdog!",
+      "class_name": "hot_dog",
+      "probability_hot_dog": 0.2762889564037323,
+      "confidence": 0.2762889564037323,
+      "threshold": 0.15000000000000002,
+      "uncertain": true,
+      "binary_entropy_nats": 0.5894141298970506,
+      "uncertainty_reasons": [
+        "high_binary_entropy"
+      ],
+      "inference_ms": 37.26,
+      "confidence_note": "Model score, not a calibrated guarantee. Unfamiliar images may still receive high confidence."
+    }
+  },
+  "corrupt_image_status": 422,
+  "invalid_mime_status": 415,
+  "frontend_status": 200,
+  "confusion_matrix_status": 200
+}
