@@ -4,6 +4,27 @@
 
 This repository contains the actual trained weights and reports. No API keys, paid prediction services, or dataset download are needed to run the application.
 
+## Submission checklist
+
+This repository is the complete second-year submission. The saved-model download option is used; a separately hosted public demo is not required by the assignment's **live demo OR model weights** clause.
+
+| Requested item | Where to find it |
+|---|---|
+| Modular PyTorch source and dependency file | [Model](seefood/model.py), [data processing](seefood/data.py), [training](seefood/train.py), [inference](seefood/predict.py), [requirements.txt](requirements.txt) |
+| Dataset download and leakage-safe splitting | [Download script](scripts/download_data.py), [split preparation](seefood/prepare.py), [data audit](reports/data_audit.json); raw data is excluded by [.gitignore](.gitignore) |
+| Pretrained backbone, custom head, freezing and fine-tuning | [Model stages](seefood/model.py), [actual epoch history](reports/history.json), [saved configuration](artifacts/metadata.json) |
+| Accuracy, precision, recall, F1 and confusion matrix | [Test metrics](reports/metrics.json), [confusion matrix](reports/confusion_matrix.png), [training curves](reports/training_curves.png) |
+| Saved model weights to download | [PyTorch .pt](https://github.com/AyushPatra45/SeeFood/raw/refs/heads/main/artifacts/model.pt), [FP32 .onnx](https://github.com/AyushPatra45/SeeFood/raw/refs/heads/main/artifacts/model.onnx), [INT8 .onnx](https://github.com/AyushPatra45/SeeFood/raw/refs/heads/main/artifacts/model.int8.onnx) |
+| REST API, frontend, loading and invalid-file handling | [FastAPI](api/main.py), [frontend](frontend/), [integration tests](tests/test_pipeline.py), [Docker smoke results](reports/container_smoke.json) |
+| Setup, dataset download and local inference instructions | The run, reproduction and inference sections below |
+| Architecture, hyperparameters and their rationale | The architecture and hyperparameters section below |
+| A training challenge and how it was addressed | The technical challenge section below |
+| Bonus: Grad-CAM | [Prediction/explanation implementation](seefood/predict.py) and the screenshot below |
+| Bonus: quantization and speed benchmark | [ONNX export and INT8 calibration](seefood/export.py), [measured size, speed and accuracy tradeoff](reports/optimization.json) |
+| Bonus: threshold tuning and entropy check | [Validation threshold selection](seefood/train.py), [ambiguity checks](seefood/predict.py); limitations documented below |
+
+See the [full requirement mapping](docs/REQUIREMENTS.md), [verification record](docs/VERIFICATION.md), and [interview guide](docs/INTERVIEW_GUIDE.md) for supporting detail.
+
 ![A real image prediction with a Grad-CAM explanation](docs/prediction.png)
 
 Screenshot example: [Hot dog with mustard](https://commons.wikimedia.org/wiki/File:Hot_dog_with_mustard.png), Czar / original photo Renee Comet, public domain / CC0. It is an outside-dataset smoke check, not part of the measured test accuracy.
@@ -102,6 +123,8 @@ RGB image → resize shorter edge to 232 → center crop 224×224
 
 Torchvision `IMAGENET1K_V2` preprocessing uses mean `[0.485, 0.456, 0.406]` and standard deviation `[0.229, 0.224, 0.225]`. This is **PyTorch normalization**, not Keras MobileNet's −1 to 1 preprocessing. Evaluation, CLI inference, API inference, and ONNX calibration share the same deterministic transform.
 
+**Why these choices:** MobileNetV2 keeps CPU inference and saved weights small while reusing pretrained visual features for a dataset with only 397 training images. The 224-pixel crop and ImageNet normalization match the chosen pretrained weights. A single-logit head directly models the two-class task; global average pooling avoids adding a large dense head. Batch size 32 is a practical memory/throughput starting point. AdamW supplies adaptive updates with mild weight decay, while dropout 0.2 and augmentation limit reliance on particular training examples. The new head uses learning rate `1e-3`; fine-tuning uses a 100-times smaller `1e-5` rate to adapt useful pretrained features gradually. These are reasonable starting settings, not claimed globally optimal values.
+
 - **Training augmentation:** random resized crop, horizontal flip, rotation up to 10°, and mild color jitter. Validation/test/inference do not use random augmentation.
 - **Loss:** `BCEWithLogitsLoss`; combines sigmoid and binary cross-entropy stably. Labels are explicitly `not_hot_dog=0`, `hot_dog=1`; a sigmoid is applied only when interpreting scores.
 - **Optimizer:** AdamW, batch size 32, weight decay `1e-4`.
@@ -114,6 +137,8 @@ Torchvision `IMAGENET1K_V2` preprocessing uses mean `[0.485, 0.456, 0.406]` and 
 The final run completed 10 head epochs and 5 fine-tuning epochs, selecting fine-tuning epoch 2. An initial 6+6-epoch pilot was checked on validation only before the final run. Training used Apple MPS and seed 42; floating-point operations and augmentation can vary across devices, so exact scores are not guaranteed on a rerun. [history.json](reports/history.json) records actual epoch results.
 
 ### A real technical challenge
+
+**During fine-tuning, training loss improved without a corresponding improvement in the best validation loss.** Validation loss reached 0.2743 at fine-tuning epoch 2. By epoch 4, training loss had fallen from 0.2122 to 0.1818, but validation loss was 0.2792; it rose to 0.2906 at epoch 5. This warned against choosing the last epoch merely because training loss was lower. The pipeline saved the lowest-validation-loss checkpoint, stopped after three epochs without improving that best value, and restored epoch 2 for inference. Augmentation, dropout, weight decay, restricted fine-tuning and frozen BatchNorm were additional controls. The saved [epoch history](reports/history.json) and [curves](reports/training_curves.png) show the actual behavior; these controls do not eliminate every generalization error.
 
 The initial data audit discovered the archive's duplicated folder tree and train/test duplicate groups. A naive recursive loader would count the corpus twice and could contaminate validation. The loader now selects one tree and uses duplicate groups to enforce separation.
 
