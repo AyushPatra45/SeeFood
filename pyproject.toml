@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "seefood-classifier"
+version = "1.0.0"
+description = "An explainable hotdog classifier with a reproducible training pipeline and FastAPI UI"
+requires-python = ">=3.10"
+
+[tool.setuptools.packages.find]
+include = ["seefood*", "api*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

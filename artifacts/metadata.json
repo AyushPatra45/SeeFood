@@ -1,0 +1,36 @@
+{
+  "class_to_idx": {
+    "not_hot_dog": 0,
+    "hot_dog": 1
+  },
+  "threshold": 0.15000000000000002,
+  "config": {
+    "data": "data/raw",
+    "reports": "reports",
+    "output": "artifacts/model.pt",
+    "head_epochs": 10,
+    "finetune_epochs": 12,
+    "batch_size": 32,
+    "workers": 0,
+    "device": "mps",
+    "seed": 42,
+    "architecture": "mobilenet_v2",
+    "pretrained_weights": "IMAGENET1K_V2",
+    "head_lr": 0.001,
+    "finetune_lr": 1e-05,
+    "weight_decay": 0.0001,
+    "image_size": 224,
+    "torch_version": "2.14.1",
+    "python": "3.12.14"
+  },
+  "best_stage": "finetune",
+  "best_epoch": 2,
+  "val_loss": 0.27426006821821436,
+  "training_seconds": 29.72,
+  "threshold_selection": {
+    "split": "val",
+    "criterion": "maximum F1, ties closest to 0.5",
+    "f1_at_0_5": 0.8695652173913043,
+    "f1_selected": 0.8909090909090909
+  }
+}

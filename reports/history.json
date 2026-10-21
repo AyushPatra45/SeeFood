@@ -1,0 +1,152 @@
+[
+  {
+    "stage": "head",
+    "epoch": 1,
+    "train_loss": 0.6482527017293108,
+    "val_loss": 0.5856549288287307,
+    "train_accuracy": 0.7153652392947103,
+    "val_accuracy": 0.8484848484848485,
+    "trainable_parameters": 1281,
+    "elapsed_seconds": 2.26
+  },
+  {
+    "stage": "head",
+    "epoch": 2,
+    "train_loss": 0.5444672901924671,
+    "val_loss": 0.5046629330726585,
+    "train_accuracy": 0.8790931989924433,
+    "val_accuracy": 0.8585858585858586,
+    "trainable_parameters": 1281,
+    "elapsed_seconds": 4.11
+  },
+  {
+    "stage": "head",
+    "epoch": 3,
+    "train_loss": 0.4759771774337634,
+    "val_loss": 0.45119981181741964,
+    "train_accuracy": 0.8841309823677582,
+    "val_accuracy": 0.8686868686868687,
+    "trainable_parameters": 1281,
+    "elapsed_seconds": 5.98
+  },
+  {
+    "stage": "head",
+    "epoch": 4,
+    "train_loss": 0.42153437101570723,
+    "val_loss": 0.4082054804370861,
+    "train_accuracy": 0.9168765743073047,
+    "val_accuracy": 0.8787878787878788,
+    "trainable_parameters": 1281,
+    "elapsed_seconds": 7.85
+  },
+  {
+    "stage": "head",
+    "epoch": 5,
+    "train_loss": 0.37846929022587217,
+    "val_loss": 0.3800879766543706,
+    "train_accuracy": 0.9093198992443325,
+    "val_accuracy": 0.8787878787878788,
+    "trainable_parameters": 1281,
+    "elapsed_seconds": 9.71
+  },
+  {
+    "stage": "head",
+    "epoch": 6,
+    "train_loss": 0.3569359404764488,
+    "val_loss": 0.36819852105896883,
+    "train_accuracy": 0.9193954659949622,
+    "val_accuracy": 0.8484848484848485,
+    "trainable_parameters": 1281,
+    "elapsed_seconds": 11.59
+  },
+  {
+    "stage": "head",
+    "epoch": 7,
+    "train_loss": 0.3189873535476944,
+    "val_loss": 0.34741390963094404,
+    "train_accuracy": 0.9269521410579346,
+    "val_accuracy": 0.8686868686868687,
+    "trainable_parameters": 1281,
+    "elapsed_seconds": 13.46
+  },
+  {
+    "stage": "head",
+    "epoch": 8,
+    "train_loss": 0.3070582556033915,
+    "val_loss": 0.3312238395364598,
+    "train_accuracy": 0.9269521410579346,
+    "val_accuracy": 0.8686868686868687,
+    "trainable_parameters": 1281,
+    "elapsed_seconds": 15.35
+  },
+  {
+    "stage": "head",
+    "epoch": 9,
+    "train_loss": 0.30626256962867465,
+    "val_loss": 0.32332468145724497,
+    "train_accuracy": 0.9319899244332494,
+    "val_accuracy": 0.8585858585858586,
+    "trainable_parameters": 1281,
+    "elapsed_seconds": 17.2
+  },
+  {
+    "stage": "head",
+    "epoch": 10,
+    "train_loss": 0.28851136137316147,
+    "val_loss": 0.31410007412084423,
+    "train_accuracy": 0.929471032745592,
+    "val_accuracy": 0.8585858585858586,
+    "trainable_parameters": 1281,
+    "elapsed_seconds": 19.09
+  },
+  {
+    "stage": "finetune",
+    "epoch": 1,
+    "train_loss": 0.2604486945294013,
+    "val_loss": 0.30524005315671066,
+    "train_accuracy": 0.9193954659949622,
+    "val_accuracy": 0.8787878787878788,
+    "trainable_parameters": 1512001,
+    "elapsed_seconds": 21.18
+  },
+  {
+    "stage": "finetune",
+    "epoch": 2,
+    "train_loss": 0.21223037425306643,
+    "val_loss": 0.27426006821821436,
+    "train_accuracy": 0.9370277078085643,
+    "val_accuracy": 0.8787878787878788,
+    "trainable_parameters": 1512001,
+    "elapsed_seconds": 23.28
+  },
+  {
+    "stage": "finetune",
+    "epoch": 3,
+    "train_loss": 0.21372898519789843,
+    "val_loss": 0.3092539960781884,
+    "train_accuracy": 0.9168765743073047,
+    "val_accuracy": 0.8888888888888888,
+    "trainable_parameters": 1512001,
+    "elapsed_seconds": 25.29
+  },
+  {
+    "stage": "finetune",
+    "epoch": 4,
+    "train_loss": 0.1817541565717918,
+    "val_loss": 0.2791952798048956,
+    "train_accuracy": 0.9345088161209067,
+    "val_accuracy": 0.8888888888888888,
+    "trainable_parameters": 1512001,
+    "elapsed_seconds": 27.28
+  },
+  {
+    "stage": "finetune",
+    "epoch": 5,
+    "train_loss": 0.19783212465963676,
+    "val_loss": 0.29061958764802026,
+    "train_accuracy": 0.924433249370277,
+    "val_accuracy": 0.8888888888888888,
+    "trainable_parameters": 1512001,
+    "elapsed_seconds": 29.25
+  }
+]

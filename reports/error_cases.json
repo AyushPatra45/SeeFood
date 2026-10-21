@@ -1,0 +1,443 @@
+[
+  {
+    "path": "test/not_hot_dog/68684.jpg",
+    "true_label": 0,
+    "predicted_label": 1,
+    "probability_hot_dog": 0.9141035676002502,
+    "correct": false
+  },
+  {
+    "path": "test/not_hot_dog/72716.jpg",
+    "true_label": 0,
+    "predicted_label": 1,
+    "probability_hot_dog": 0.7934398651123047,
+    "correct": false
+  },
+  {
+    "path": "test/not_hot_dog/36081.jpg",
+    "true_label": 0,
+    "predicted_label": 1,
+    "probability_hot_dog": 0.6612011194229126,
+    "correct": false
+  },
+  {
+    "path": "test/not_hot_dog/44810.jpg",
+    "true_label": 0,
+    "predicted_label": 1,
+    "probability_hot_dog": 0.5580657720565796,
+    "correct": false
+  },
+  {
+    "path": "test/not_hot_dog/19143.jpg",
+    "true_label": 0,
+    "predicted_label": 1,
+    "probability_hot_dog": 0.5432252883911133,
+    "correct": false
+  },
+  {
+    "path": "test/not_hot_dog/80750.jpg",
+    "true_label": 0,
+    "predicted_label": 1,
+    "probability_hot_dog": 0.5362048745155334,
+    "correct": false
+  },
+  {
+    "path": "test/not_hot_dog/69414.jpg",
+    "true_label": 0,
+    "predicted_label": 1,
+    "probability_hot_dog": 0.45371806621551514,
+    "correct": false
+  },
+  {
+    "path": "test/not_hot_dog/55601.jpg",
+    "true_label": 0,
+    "predicted_label": 1,
+    "probability_hot_dog": 0.4312417805194855,
+    "correct": false
+  },
+  {
+    "path": "test/not_hot_dog/7847.jpg",
+    "true_label": 0,
+    "predicted_label": 1,
+    "probability_hot_dog": 0.4183415472507477,
+    "correct": false
+  },
+  {
+    "path": "test/not_hot_dog/61822.jpg",
+    "true_label": 0,
+    "predicted_label": 1,
+    "probability_hot_dog": 0.4159548878669739,
+    "correct": false
+  },
+  {
+    "path": "test/not_hot_dog/25414.jpg",
+    "true_label": 0,
+    "predicted_label": 1,
+    "probability_hot_dog": 0.40928199887275696,
+    "correct": false
+  },
+  {
+    "path": "test/not_hot_dog/48840.jpg",
+    "true_label": 0,
+    "predicted_label": 1,
+    "probability_hot_dog": 0.40515828132629395,
+    "correct": false
+  },
+  {
+    "path": "test/not_hot_dog/60844.jpg",
+    "true_label": 0,
+    "predicted_label": 1,
+    "probability_hot_dog": 0.3991910219192505,
+    "correct": false
+  },
+  {
+    "path": "test/not_hot_dog/83538.jpg",
+    "true_label": 0,
+    "predicted_label": 1,
+    "probability_hot_dog": 0.38676807284355164,
+    "correct": false
+  },
+  {
+    "path": "test/not_hot_dog/48073.jpg",
+    "true_label": 0,
+    "predicted_label": 1,
+    "probability_hot_dog": 0.3700729012489319,
+    "correct": false
+  },
+  {
+    "path": "test/not_hot_dog/63480.jpg",
+    "true_label": 0,
+    "predicted_label": 1,
+    "probability_hot_dog": 0.36310240626335144,
+    "correct": false
+  },
+  {
+    "path": "test/not_hot_dog/48208.jpg",
+    "true_label": 0,
+    "predicted_label": 1,
+    "probability_hot_dog": 0.35892343521118164,
+    "correct": false
+  },
+  {
+    "path": "test/not_hot_dog/26489.jpg",
+    "true_label": 0,
+    "predicted_label": 1,
+    "probability_hot_dog": 0.3540962040424347,
+    "correct": false
+  },
+  {
+    "path": "test/not_hot_dog/54540.jpg",
+    "true_label": 0,
+    "predicted_label": 1,
+    "probability_hot_dog": 0.34273505210876465,
+    "correct": false
+  },
+  {
+    "path": "test/not_hot_dog/53217.jpg",
+    "true_label": 0,
+    "predicted_label": 1,
+    "probability_hot_dog": 0.3332887291908264,
+    "correct": false
+  },
+  {
+    "path": "test/not_hot_dog/22777.jpg",
+    "true_label": 0,
+    "predicted_label": 1,
+    "probability_hot_dog": 0.3281467854976654,
+    "correct": false
+  },
+  {
+    "path": "test/not_hot_dog/22489.jpg",
+    "true_label": 0,
+    "predicted_label": 1,
+    "probability_hot_dog": 0.30827540159225464,
+    "correct": false
+  },
+  {
+    "path": "test/not_hot_dog/56409.jpg",
+    "true_label": 0,
+    "predicted_label": 1,
+    "probability_hot_dog": 0.29703521728515625,
+    "correct": false
+  },
+  {
+    "path": "test/hot_dog/160523.jpg",
+    "true_label": 1,
+    "predicted_label": 0,
+    "probability_hot_dog": 0.009697649627923965,
+    "correct": false
+  },
+  {
+    "path": "test/not_hot_dog/80190.jpg",
+    "true_label": 0,
+    "predicted_label": 1,
+    "probability_hot_dog": 0.28811612725257874,
+    "correct": false
+  },
+  {
+    "path": "test/hot_dog/493727.jpg",
+    "true_label": 1,
+    "predicted_label": 0,
+    "probability_hot_dog": 0.012592660263180733,
+    "correct": false
+  },
+  {
+    "path": "test/not_hot_dog/52510.jpg",
+    "true_label": 0,
+    "predicted_label": 1,
+    "probability_hot_dog": 0.27892979979515076,
+    "correct": false
+  },
+  {
+    "path": "test/not_hot_dog/23601.jpg",
+    "true_label": 0,
+    "predicted_label": 1,
+    "probability_hot_dog": 0.26623857021331787,
+    "correct": false
+  },
+  {
+    "path": "test/not_hot_dog/80865.jpg",
+    "true_label": 0,
+    "predicted_label": 1,
+    "probability_hot_dog": 0.2631882429122925,
+    "correct": false
+  },
+  {
+    "path": "test/not_hot_dog/65128.jpg",
+    "true_label": 0,
+    "predicted_label": 1,
+    "probability_hot_dog": 0.26202598214149475,
+    "correct": false
+  },
+  {
+    "path": "test/not_hot_dog/77677.jpg",
+    "true_label": 0,
+    "predicted_label": 1,
+    "probability_hot_dog": 0.2606419026851654,
+    "correct": false
+  },
+  {
+    "path": "test/not_hot_dog/61656.jpg",
+    "true_label": 0,
+    "predicted_label": 1,
+    "probability_hot_dog": 0.258460134267807,
+    "correct": false
+  },
+  {
+    "path": "test/not_hot_dog/52934.jpg",
+    "true_label": 0,
+    "predicted_label": 1,
+    "probability_hot_dog": 0.25367221236228943,
+    "correct": false
+  },
+  {
+    "path": "test/not_hot_dog/40449.jpg",
+    "true_label": 0,
+    "predicted_label": 1,
+    "probability_hot_dog": 0.23969802260398865,
+    "correct": false
+  },
+  {
+    "path": "test/hot_dog/505584.jpg",
+    "true_label": 1,
+    "predicted_label": 0,
+    "probability_hot_dog": 0.07305574417114258,
+    "correct": false
+  },
+  {
+    "path": "test/not_hot_dog/9657.jpg",
+    "true_label": 0,
+    "predicted_label": 1,
+    "probability_hot_dog": 0.22602832317352295,
+    "correct": false
+  },
+  {
+    "path": "test/not_hot_dog/32004.jpg",
+    "true_label": 0,
+    "predicted_label": 1,
+    "probability_hot_dog": 0.21469637751579285,
+    "correct": false
+  },
+  {
+    "path": "test/not_hot_dog/40944.jpg",
+    "true_label": 0,
+    "predicted_label": 1,
+    "probability_hot_dog": 0.21225997805595398,
+    "correct": false
+  },
+  {
+    "path": "test/not_hot_dog/50193.jpg",
+    "true_label": 0,
+    "predicted_label": 1,
+    "probability_hot_dog": 0.2101335972547531,
+    "correct": false
+  },
+  {
+    "path": "test/not_hot_dog/47115.jpg",
+    "true_label": 0,
+    "predicted_label": 1,
+    "probability_hot_dog": 0.20627948641777039,
+    "correct": false
+  },
+  {
+    "path": "test/not_hot_dog/42487.jpg",
+    "true_label": 0,
+    "predicted_label": 1,
+    "probability_hot_dog": 0.20595070719718933,
+    "correct": false
+  },
+  {
+    "path": "test/hot_dog/707784.jpg",
+    "true_label": 1,
+    "predicted_label": 0,
+    "probability_hot_dog": 0.09981139749288559,
+    "correct": false
+  },
+  {
+    "path": "test/hot_dog/154409.jpg",
+    "true_label": 1,
+    "predicted_label": 0,
+    "probability_hot_dog": 0.10126741975545883,
+    "correct": false
+  },
+  {
+    "path": "test/not_hot_dog/20532.jpg",
+    "true_label": 0,
+    "predicted_label": 1,
+    "probability_hot_dog": 0.19858792424201965,
+    "correct": false
+  },
+  {
+    "path": "test/not_hot_dog/20787.jpg",
+    "true_label": 0,
+    "predicted_label": 1,
+    "probability_hot_dog": 0.1959424614906311,
+    "correct": false
+  },
+  {
+    "path": "test/not_hot_dog/36370.jpg",
+    "true_label": 0,
+    "predicted_label": 1,
+    "probability_hot_dog": 0.18679548799991608,
+    "correct": false
+  },
+  {
+    "path": "test/not_hot_dog/88158.jpg",
+    "true_label": 0,
+    "predicted_label": 1,
+    "probability_hot_dog": 0.18628236651420593,
+    "correct": false
+  },
+  {
+    "path": "test/not_hot_dog/58787.jpg",
+    "true_label": 0,
+    "predicted_label": 1,
+    "probability_hot_dog": 0.1859614998102188,
+    "correct": false
+  },
+  {
+    "path": "test/not_hot_dog/54252.jpg",
+    "true_label": 0,
+    "predicted_label": 1,
+    "probability_hot_dog": 0.1851203888654709,
+    "correct": false
+  },
+  {
+    "path": "test/not_hot_dog/66858.jpg",
+    "true_label": 0,
+    "predicted_label": 1,
+    "probability_hot_dog": 0.1835128217935562,
+    "correct": false
+  },
+  {
+    "path": "test/not_hot_dog/25784.jpg",
+    "true_label": 0,
+    "predicted_label": 1,
+    "probability_hot_dog": 0.1812911480665207,
+    "correct": false
+  },
+  {
+    "path": "test/not_hot_dog/82946.jpg",
+    "true_label": 0,
+    "predicted_label": 1,
+    "probability_hot_dog": 0.17988979816436768,
+    "correct": false
+  },
+  {
+    "path": "test/not_hot_dog/39461.jpg",
+    "true_label": 0,
+    "predicted_label": 1,
+    "probability_hot_dog": 0.1738688200712204,
+    "correct": false
+  },
+  {
+    "path": "test/not_hot_dog/23199.jpg",
+    "true_label": 0,
+    "predicted_label": 1,
+    "probability_hot_dog": 0.17269662022590637,
+    "correct": false
+  },
+  {
+    "path": "test/not_hot_dog/69328.jpg",
+    "true_label": 0,
+    "predicted_label": 1,
+    "probability_hot_dog": 0.1717354953289032,
+    "correct": false
+  },
+  {
+    "path": "test/not_hot_dog/22080.jpg",
+    "true_label": 0,
+    "predicted_label": 1,
+    "probability_hot_dog": 0.16802500188350677,
+    "correct": false
+  },
+  {
+    "path": "test/not_hot_dog/27410.jpg",
+    "true_label": 0,
+    "predicted_label": 1,
+    "probability_hot_dog": 0.1663605123758316,
+    "correct": false
+  },
+  {
+    "path": "test/not_hot_dog/62084.jpg",
+    "true_label": 0,
+    "predicted_label": 1,
+    "probability_hot_dog": 0.1640976369380951,
+    "correct": false
+  },
+  {
+    "path": "test/not_hot_dog/44449.jpg",
+    "true_label": 0,
+    "predicted_label": 1,
+    "probability_hot_dog": 0.16312538087368011,
+    "correct": false
+  },
+  {
+    "path": "test/hot_dog/133012.jpg",
+    "true_label": 1,
+    "predicted_label": 0,
+    "probability_hot_dog": 0.13882941007614136,
+    "correct": false
+  },
+  {
+    "path": "test/not_hot_dog/7056.jpg",
+    "true_label": 0,
+    "predicted_label": 1,
+    "probability_hot_dog": 0.15777266025543213,
+    "correct": false
+  },
+  {
+    "path": "test/not_hot_dog/63878.jpg",
+    "true_label": 0,
+    "predicted_label": 1,
+    "probability_hot_dog": 0.15565140545368195,
+    "correct": false
+  },
+  {
+    "path": "test/not_hot_dog/17304.jpg",
+    "true_label": 0,
+    "predicted_label": 1,
+    "probability_hot_dog": 0.15048769116401672,
+    "correct": false
+  }
+]

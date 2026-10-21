@@ -1,0 +1,6 @@
+{
+  "artifacts/metadata.json": "bb381b75afe02fe55c2e5465cab16f6c4b86677e9db2adaaead30541d0025ac5",
+  "artifacts/model.int8.onnx": "e889ad529d189f1ed46a8ddb208a7fbb0118d211b40ae80b8da91371d87c6205",
+  "artifacts/model.onnx": "dfa96fcb03609da17cdc2d46b1822a9fb0496a485fb30af2833ad3d905a64f96",
+  "artifacts/model.pt": "d17538830ba445d16be38d970654cda421ba87398d3c754617cf2888da798e4e"
+}

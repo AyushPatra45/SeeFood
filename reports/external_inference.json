@@ -1,0 +1,36 @@
+[
+  {
+    "label": "Hotdog!",
+    "class_name": "hot_dog",
+    "probability_hot_dog": 0.9958915710449219,
+    "confidence": 0.9958915710449219,
+    "threshold": 0.15000000000000002,
+    "uncertain": false,
+    "inference_ms": 18.26,
+    "confidence_note": "Model score, not a calibrated guarantee. Unfamiliar images may still receive high confidence.",
+    "source": "https://commons.wikimedia.org/wiki/File:Hot_dog_with_mustard.png",
+    "file_sha256": "0dcb434fe7d1cd6d0ad8dd6103bff87eaaea5361425f1856f3a10ad43ae83a55",
+    "decoded_pixels_match_dataset": false,
+    "nearest_dataset_dhash_distance": 17,
+    "binary_entropy_nats": 0.02667462223049833,
+    "uncertainty_reasons": []
+  },
+  {
+    "label": "Hotdog!",
+    "class_name": "hot_dog",
+    "probability_hot_dog": 0.2762888967990875,
+    "confidence": 0.2762888967990875,
+    "threshold": 0.15000000000000002,
+    "uncertain": true,
+    "inference_ms": 16.72,
+    "confidence_note": "Model score, not a calibrated guarantee. Unfamiliar images may still receive high confidence.",
+    "source": "https://commons.wikimedia.org/wiki/File:Cat03.jpg",
+    "file_sha256": "ec8ff0a6954a5f54e4ad246f0a788d076f675e457bca16a04248718cca3fe631",
+    "decoded_pixels_match_dataset": false,
+    "nearest_dataset_dhash_distance": 12,
+    "binary_entropy_nats": 0.5894140725010506,
+    "uncertainty_reasons": [
+      "high_binary_entropy"
+    ]
+  }
+]

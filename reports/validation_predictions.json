@@ -1,0 +1,497 @@
+[
+  {
+    "path": "train/hot_dog/1057517.jpg",
+    "label": 1,
+    "probability_hot_dog": 0.8977356553077698
+  },
+  {
+    "path": "train/hot_dog/1119906.jpg",
+    "label": 1,
+    "probability_hot_dog": 0.9816359281539917
+  },
+  {
+    "path": "train/hot_dog/1161343.jpg",
+    "label": 1,
+    "probability_hot_dog": 0.8259405493736267
+  },
+  {
+    "path": "train/hot_dog/116486.jpg",
+    "label": 1,
+    "probability_hot_dog": 0.9837667942047119
+  },
+  {
+    "path": "train/hot_dog/118875.jpg",
+    "label": 1,
+    "probability_hot_dog": 0.982854962348938
+  },
+  {
+    "path": "train/hot_dog/1205205.jpg",
+    "label": 1,
+    "probability_hot_dog": 0.582158088684082
+  },
+  {
+    "path": "train/hot_dog/1234491.jpg",
+    "label": 1,
+    "probability_hot_dog": 0.6230043768882751
+  },
+  {
+    "path": "train/hot_dog/124987.jpg",
+    "label": 1,
+    "probability_hot_dog": 0.8684800267219543
+  },
+  {
+    "path": "train/hot_dog/1251173.jpg",
+    "label": 1,
+    "probability_hot_dog": 0.1554376780986786
+  },
+  {
+    "path": "train/hot_dog/1268739.jpg",
+    "label": 1,
+    "probability_hot_dog": 0.38233134150505066
+  },
+  {
+    "path": "train/hot_dog/127252.jpg",
+    "label": 1,
+    "probability_hot_dog": 0.9815147519111633
+  },
+  {
+    "path": "train/hot_dog/1301907.jpg",
+    "label": 1,
+    "probability_hot_dog": 0.9021092057228088
+  },
+  {
+    "path": "train/hot_dog/1308879.jpg",
+    "label": 1,
+    "probability_hot_dog": 0.9533053040504456
+  },
+  {
+    "path": "train/hot_dog/1313978.jpg",
+    "label": 1,
+    "probability_hot_dog": 0.8874163031578064
+  },
+  {
+    "path": "train/hot_dog/1335350.jpg",
+    "label": 1,
+    "probability_hot_dog": 0.8337545394897461
+  },
+  {
+    "path": "train/hot_dog/3497633.jpg",
+    "label": 1,
+    "probability_hot_dog": 0.8448666930198669
+  },
+  {
+    "path": "train/hot_dog/3543293.jpg",
+    "label": 1,
+    "probability_hot_dog": 0.24163009226322174
+  },
+  {
+    "path": "train/hot_dog/3558578.jpg",
+    "label": 1,
+    "probability_hot_dog": 0.8621881008148193
+  },
+  {
+    "path": "train/hot_dog/3575940.jpg",
+    "label": 1,
+    "probability_hot_dog": 0.16321542859077454
+  },
+  {
+    "path": "train/hot_dog/3622018.jpg",
+    "label": 1,
+    "probability_hot_dog": 0.9766104221343994
+  },
+  {
+    "path": "train/hot_dog/3636192.jpg",
+    "label": 1,
+    "probability_hot_dog": 0.988629937171936
+  },
+  {
+    "path": "train/hot_dog/3646755.jpg",
+    "label": 1,
+    "probability_hot_dog": 0.6129674911499023
+  },
+  {
+    "path": "train/hot_dog/3690.jpg",
+    "label": 1,
+    "probability_hot_dog": 0.1946057379245758
+  },
+  {
+    "path": "train/hot_dog/3711230.jpg",
+    "label": 1,
+    "probability_hot_dog": 0.9912680387496948
+  },
+  {
+    "path": "train/hot_dog/3711747.jpg",
+    "label": 1,
+    "probability_hot_dog": 0.962390661239624
+  },
+  {
+    "path": "train/hot_dog/3728106.jpg",
+    "label": 1,
+    "probability_hot_dog": 0.9886117577552795
+  },
+  {
+    "path": "train/hot_dog/3746979.jpg",
+    "label": 1,
+    "probability_hot_dog": 0.9743552207946777
+  },
+  {
+    "path": "train/hot_dog/3764724.jpg",
+    "label": 1,
+    "probability_hot_dog": 0.92960524559021
+  },
+  {
+    "path": "train/hot_dog/3789403.jpg",
+    "label": 1,
+    "probability_hot_dog": 0.6613132953643799
+  },
+  {
+    "path": "train/hot_dog/3798465.jpg",
+    "label": 1,
+    "probability_hot_dog": 0.7825289368629456
+  },
+  {
+    "path": "train/hot_dog/3802333.jpg",
+    "label": 1,
+    "probability_hot_dog": 0.9024631381034851
+  },
+  {
+    "path": "train/hot_dog/3811761.jpg",
+    "label": 1,
+    "probability_hot_dog": 0.898339033126831
+  },
+  {
+    "path": "train/hot_dog/3842701.jpg",
+    "label": 1,
+    "probability_hot_dog": 0.8956488966941833
+  },
+  {
+    "path": "train/hot_dog/3846249.jpg",
+    "label": 1,
+    "probability_hot_dog": 0.16333721578121185
+  },
+  {
+    "path": "train/hot_dog/3860703.jpg",
+    "label": 1,
+    "probability_hot_dog": 0.9925891160964966
+  },
+  {
+    "path": "train/hot_dog/3861791.jpg",
+    "label": 1,
+    "probability_hot_dog": 0.959998607635498
+  },
+  {
+    "path": "train/hot_dog/3884328.jpg",
+    "label": 1,
+    "probability_hot_dog": 0.23426170647144318
+  },
+  {
+    "path": "train/hot_dog/3904556.jpg",
+    "label": 1,
+    "probability_hot_dog": 0.3501085937023163
+  },
+  {
+    "path": "train/hot_dog/3912870.jpg",
+    "label": 1,
+    "probability_hot_dog": 0.9676923751831055
+  },
+  {
+    "path": "train/hot_dog/3918223.jpg",
+    "label": 1,
+    "probability_hot_dog": 0.9706352949142456
+  },
+  {
+    "path": "train/hot_dog/864518.jpg",
+    "label": 1,
+    "probability_hot_dog": 0.9904438853263855
+  },
+  {
+    "path": "train/hot_dog/867991.jpg",
+    "label": 1,
+    "probability_hot_dog": 0.8738430142402649
+  },
+  {
+    "path": "train/hot_dog/884796.jpg",
+    "label": 1,
+    "probability_hot_dog": 0.999427318572998
+  },
+  {
+    "path": "train/hot_dog/891949.jpg",
+    "label": 1,
+    "probability_hot_dog": 0.33993175625801086
+  },
+  {
+    "path": "train/hot_dog/910827.jpg",
+    "label": 1,
+    "probability_hot_dog": 0.08168011903762817
+  },
+  {
+    "path": "train/hot_dog/917699.jpg",
+    "label": 1,
+    "probability_hot_dog": 0.9741912484169006
+  },
+  {
+    "path": "train/hot_dog/920993.jpg",
+    "label": 1,
+    "probability_hot_dog": 0.9904392957687378
+  },
+  {
+    "path": "train/hot_dog/926070.jpg",
+    "label": 1,
+    "probability_hot_dog": 0.9910558462142944
+  },
+  {
+    "path": "train/hot_dog/935952.jpg",
+    "label": 1,
+    "probability_hot_dog": 0.9785297513008118
+  },
+  {
+    "path": "train/hot_dog/941035.jpg",
+    "label": 1,
+    "probability_hot_dog": 0.9484800696372986
+  },
+  {
+    "path": "train/not_hot_dog/100135.jpg",
+    "label": 0,
+    "probability_hot_dog": 0.03992677479982376
+  },
+  {
+    "path": "train/not_hot_dog/101312.jpg",
+    "label": 0,
+    "probability_hot_dog": 0.04847064986824989
+  },
+  {
+    "path": "train/not_hot_dog/102037.jpg",
+    "label": 0,
+    "probability_hot_dog": 0.48490163683891296
+  },
+  {
+    "path": "train/not_hot_dog/103010.jpg",
+    "label": 0,
+    "probability_hot_dog": 0.036812249571084976
+  },
+  {
+    "path": "train/not_hot_dog/105375.jpg",
+    "label": 0,
+    "probability_hot_dog": 0.11935421824455261
+  },
+  {
+    "path": "train/not_hot_dog/107816.jpg",
+    "label": 0,
+    "probability_hot_dog": 0.0321197435259819
+  },
+  {
+    "path": "train/not_hot_dog/109401.jpg",
+    "label": 0,
+    "probability_hot_dog": 0.029980842024087906
+  },
+  {
+    "path": "train/not_hot_dog/112309.jpg",
+    "label": 0,
+    "probability_hot_dog": 0.026752863079309464
+  },
+  {
+    "path": "train/not_hot_dog/124128.jpg",
+    "label": 0,
+    "probability_hot_dog": 0.03427254036068916
+  },
+  {
+    "path": "train/not_hot_dog/129045.jpg",
+    "label": 0,
+    "probability_hot_dog": 0.1676468551158905
+  },
+  {
+    "path": "train/not_hot_dog/129730.jpg",
+    "label": 0,
+    "probability_hot_dog": 0.03663277253508568
+  },
+  {
+    "path": "train/not_hot_dog/130384.jpg",
+    "label": 0,
+    "probability_hot_dog": 0.024053333327174187
+  },
+  {
+    "path": "train/not_hot_dog/138514.jpg",
+    "label": 0,
+    "probability_hot_dog": 0.009309366345405579
+  },
+  {
+    "path": "train/not_hot_dog/139291.jpg",
+    "label": 0,
+    "probability_hot_dog": 0.06509075313806534
+  },
+  {
+    "path": "train/not_hot_dog/140832.jpg",
+    "label": 0,
+    "probability_hot_dog": 0.028763458132743835
+  },
+  {
+    "path": "train/not_hot_dog/143158.jpg",
+    "label": 0,
+    "probability_hot_dog": 0.6260350942611694
+  },
+  {
+    "path": "train/not_hot_dog/160301.jpg",
+    "label": 0,
+    "probability_hot_dog": 0.02042943611741066
+  },
+  {
+    "path": "train/not_hot_dog/164288.jpg",
+    "label": 0,
+    "probability_hot_dog": 0.4581265151500702
+  },
+  {
+    "path": "train/not_hot_dog/166217.jpg",
+    "label": 0,
+    "probability_hot_dog": 0.030514830723404884
+  },
+  {
+    "path": "train/not_hot_dog/166821.jpg",
+    "label": 0,
+    "probability_hot_dog": 0.02558538317680359
+  },
+  {
+    "path": "train/not_hot_dog/173241.jpg",
+    "label": 0,
+    "probability_hot_dog": 0.13493190705776215
+  },
+  {
+    "path": "train/not_hot_dog/174045.jpg",
+    "label": 0,
+    "probability_hot_dog": 0.0514824241399765
+  },
+  {
+    "path": "train/not_hot_dog/181677.jpg",
+    "label": 0,
+    "probability_hot_dog": 0.0032935254275798798
+  },
+  {
+    "path": "train/not_hot_dog/187087.jpg",
+    "label": 0,
+    "probability_hot_dog": 0.012181875295937061
+  },
+  {
+    "path": "train/not_hot_dog/191085.jpg",
+    "label": 0,
+    "probability_hot_dog": 0.09591171890497208
+  },
+  {
+    "path": "train/not_hot_dog/194973.jpg",
+    "label": 0,
+    "probability_hot_dog": 0.0891074538230896
+  },
+  {
+    "path": "train/not_hot_dog/200448.jpg",
+    "label": 0,
+    "probability_hot_dog": 0.24624061584472656
+  },
+  {
+    "path": "train/not_hot_dog/203613.jpg",
+    "label": 0,
+    "probability_hot_dog": 0.01654745638370514
+  },
+  {
+    "path": "train/not_hot_dog/206271.jpg",
+    "label": 0,
+    "probability_hot_dog": 0.05873376876115799
+  },
+  {
+    "path": "train/not_hot_dog/212348.jpg",
+    "label": 0,
+    "probability_hot_dog": 0.04466327652335167
+  },
+  {
+    "path": "train/not_hot_dog/222586.jpg",
+    "label": 0,
+    "probability_hot_dog": 0.004619820509105921
+  },
+  {
+    "path": "train/not_hot_dog/223676.jpg",
+    "label": 0,
+    "probability_hot_dog": 0.4877440333366394
+  },
+  {
+    "path": "train/not_hot_dog/239724.jpg",
+    "label": 0,
+    "probability_hot_dog": 0.018620671704411507
+  },
+  {
+    "path": "train/not_hot_dog/258877.jpg",
+    "label": 0,
+    "probability_hot_dog": 0.015541443601250648
+  },
+  {
+    "path": "train/not_hot_dog/270122.jpg",
+    "label": 0,
+    "probability_hot_dog": 0.08118508011102676
+  },
+  {
+    "path": "train/not_hot_dog/292607.jpg",
+    "label": 0,
+    "probability_hot_dog": 0.30819040536880493
+  },
+  {
+    "path": "train/not_hot_dog/320734.jpg",
+    "label": 0,
+    "probability_hot_dog": 0.0816177949309349
+  },
+  {
+    "path": "train/not_hot_dog/4770.jpg",
+    "label": 0,
+    "probability_hot_dog": 0.01927763968706131
+  },
+  {
+    "path": "train/not_hot_dog/748088.jpg",
+    "label": 0,
+    "probability_hot_dog": 0.2891809642314911
+  },
+  {
+    "path": "train/not_hot_dog/779193.jpg",
+    "label": 0,
+    "probability_hot_dog": 0.18206697702407837
+  },
+  {
+    "path": "train/not_hot_dog/803895.jpg",
+    "label": 0,
+    "probability_hot_dog": 0.020742148160934448
+  },
+  {
+    "path": "train/not_hot_dog/828189.jpg",
+    "label": 0,
+    "probability_hot_dog": 0.06230335310101509
+  },
+  {
+    "path": "train/not_hot_dog/89197.jpg",
+    "label": 0,
+    "probability_hot_dog": 0.3665465712547302
+  },
+  {
+    "path": "train/not_hot_dog/89974.jpg",
+    "label": 0,
+    "probability_hot_dog": 0.5182176232337952
+  },
+  {
+    "path": "train/not_hot_dog/91708.jpg",
+    "label": 0,
+    "probability_hot_dog": 0.07709471136331558
+  },
+  {
+    "path": "train/not_hot_dog/94215.jpg",
+    "label": 0,
+    "probability_hot_dog": 0.08661317080259323
+  },
+  {
+    "path": "train/not_hot_dog/98617.jpg",
+    "label": 0,
+    "probability_hot_dog": 0.053599823266267776
+  },
+  {
+    "path": "train/not_hot_dog/99010.jpg",
+    "label": 0,
+    "probability_hot_dog": 0.03883993625640869
+  },
+  {
+    "path": "train/not_hot_dog/99136.jpg",
+    "label": 0,
+    "probability_hot_dog": 0.004732782486826181
+  }
+]

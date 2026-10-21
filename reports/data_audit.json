@@ -1,0 +1,35 @@
+{
+  "source": "https://www.kaggle.com/datasets/dansbecker/hot-dog-not-hot-dog",
+  "dataset_subdirectory": ".",
+  "seed": 42,
+  "class_to_idx": {
+    "not_hot_dog": 0,
+    "hot_dog": 1
+  },
+  "counts": {
+    "train": {
+      "hot_dog": 199,
+      "not_hot_dog": 198
+    },
+    "val": {
+      "hot_dog": 50,
+      "not_hot_dog": 49
+    },
+    "test": {
+      "hot_dog": 250,
+      "not_hot_dog": 250
+    }
+  },
+  "invalid_files": [],
+  "near_duplicate_pairs_detected": 6,
+  "excluded_training_paths_overlapping_test": [
+    "train/not_hot_dog/92331.jpg",
+    "train/not_hot_dog/97656.jpg"
+  ],
+  "duplicate_policy": "Decoded RGB SHA256 or 64-bit dHash distance <=2 groups; preserve official test; exclude overlapping train images; group-aware stratified train/val split.",
+  "limitations": "Perceptual hashing is a heuristic, not proof that every semantic duplicate is detected. Official test may contain within-test duplicates.",
+  "download": {
+    "source": "https://www.kaggle.com/api/v1/datasets/download/dansbecker/hot-dog-not-hot-dog",
+    "sha256": "daa6e93b2bfe934fc1432eef870f58a1684fb26051c3d05dc5a57fdf5d5b9480"
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "accuracy": 0.874,
+  "precision": 0.8106312292358804,
+  "recall": 0.976,
+  "f1": 0.8856624319419237,
+  "confusion_matrix": [
+    [
+      193,
+      57
+    ],
+    [
+      6,
+      244
+    ]
+  ],
+  "test_size": 500,
+  "threshold": 0.15000000000000002,
+  "positive_class": "hot_dog",
+  "confusion_matrix_order": [
+    "not_hot_dog",
+    "hot_dog"
+  ],
+  "loss": 0.23178341609239578,
+  "at_default_threshold": {
+    "accuracy": 0.914,
+    "precision": 0.9726027397260274,
+    "recall": 0.852,
+    "f1": 0.908315565031983,
+    "confusion_matrix": [
+      [
+        244,
+        6
+      ],
+      [
+        37,
+        213
+      ]
+    ]
+  },
+  "checkpoint_sha256": "d17538830ba445d16be38d970654cda421ba87398d3c754617cf2888da798e4e",
+  "accuracy_95_percent_wilson_interval": [
+    0.842031642241812,
+    0.9002651430970722
+  ]
+}

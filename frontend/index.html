@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Hotdog or not hotdog? An image classifier you can inspect, from prediction to Grad-CAM.">
+  <title>SeeFood — A little food for thought.</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌭</text></svg>">
+  <link rel="stylesheet" href="/static/style.css"><script src="/static/app.js" defer></script>
+</head>
+<body>
+  <header class="site-header wrap">
+    <a class="wordmark" href="/" aria-label="SeeFood home"><span class="brand-icon" aria-hidden="true">s<span>f</span></span>seefood<span class="brand-period">.</span></a>
+    <nav aria-label="Main navigation"><a href="#classifier" class="nav-active">The classifier</a><a href="#evaluation">Under the hood <span aria-hidden="true">↗</span></a></nav>
+    <span class="status-pill" id="model-status"><span class="status-dot"></span><span id="status-text">Connecting</span></span>
+  </header>
+  <main class="wrap">
+    <section class="intro" id="classifier">
+      <div class="eyebrow"><span class="tiny-line"></span> SMALL MODEL. BIG APPETITE.</div>
+      <h1>A hotdog.<br>Or a <em>plot twist.</em></h1>
+      <p class="intro-copy">Some questions need deep thought. This one needs a photo.<br class="desktop-break"> Drop an image and let a little computer vision take a look.</p>
+      <span class="intro-stamp" aria-hidden="true">100%<br><span>curious</span><svg viewBox="0 0 60 26"><path d="M5 5q25 30 50 0"/></svg></span>
+    </section>
+    <section class="workspace" aria-label="Image classifier">
+      <div class="upload-panel panel">
+        <div class="panel-top"><span><span class="step-number">01</span> THE EVIDENCE</span><span class="micro">YOUR IMAGE GOES HERE</span></div>
+        <div id="dropzone" class="dropzone">
+          <input type="file" id="file-input" accept="image/jpeg,image/png,image/webp" class="visually-hidden">
+          <div id="upload-empty">
+            <svg class="hotdog-art" viewBox="0 0 240 160" aria-hidden="true">
+              <ellipse cx="122" cy="137" rx="84" ry="10" fill="#e9e4d8"/>
+              <g transform="rotate(-24 120 82)">
+                <rect x="31" y="48" width="178" height="70" rx="35" fill="#ddb274"/>
+                <rect x="34" y="40" width="172" height="65" rx="32" fill="#f0ce94"/>
+                <path d="M53 66c15-25 124-25 137 0" stroke="#ffe6b6" stroke-width="8" fill="none" stroke-linecap="round"/>
+                <rect x="44" y="62" width="151" height="35" rx="17" fill="#ad492b"/>
+                <path d="M60 74q10-14 20 0t20 0t20 0t20 0t20 0t18-1" stroke="#f9cd3c" stroke-width="5" fill="none" stroke-linecap="round"/>
+                <path d="M44 94q70 27 151-1" stroke="#f5d6a1" stroke-width="13" fill="none" stroke-linecap="round"/>
+              </g>
+              <path d="M203 33v14m-7-7h14M33 31v10m-5-5h10" stroke="#62816b" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            <h2>Got something to show us?</h2><p>Drag & drop your photo here, or</p>
+            <button id="choose-button" class="choose-button" type="button">Choose an image <span aria-hidden="true">↗</span></button>
+            <p class="file-help">JPG, PNG or WebP · up to 8 MiB · 16 MP</p>
+          </div>
+          <div id="upload-preview" hidden><img id="preview-image" alt="Your uploaded image"><button type="button" id="change-button" class="change-button">Change image ↻</button></div>
+        </div>
+        <div class="file-row" id="file-row" hidden><span id="file-name"></span><span id="file-size"></span></div>
+        <div class="explain-row"><label class="switch"><input id="explain-toggle" type="checkbox" checked><span class="switch-track"></span><span>Show what caught its eye</span></label><span class="tag">GRAD-CAM</span></div>
+        <button type="button" id="predict-button" class="predict-button" disabled><span id="predict-label">Is it a hotdog?</span><span id="predict-arrow" aria-hidden="true">→</span></button>
+        <p class="error-message" id="error" role="alert" hidden></p>
+        <p class="privacy-note"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 7V5a4 4 0 0 1 8 0v2M3 7h10v8H3z"/></svg> Your photo isn’t kept after the request.</p>
+      </div>
+      <div class="result-panel panel" aria-live="polite" aria-busy="false" id="result-panel">
+        <div class="panel-top"><span><span class="step-number">02</span> THE VERDICT</span><span class="micro" id="result-state">AWAITING EVIDENCE</span></div>
+        <div id="result-empty" class="result-empty"><div class="viewfinder" aria-hidden="true"><span>?</span></div><h2>The suspense is delicious.</h2><p>Your prediction will appear here.<br>One photo. Two possibilities.</p><span class="empty-label">HOTDOG <span> / </span> NOT HOTDOG</span></div>
+        <div id="result-content" class="result-content" hidden>
+          <span class="result-eyebrow" id="result-eyebrow">THE MODEL SAYS</span><h2 id="prediction"></h2>
+          <div class="confidence-row"><span>Predicted-class score</span><strong id="confidence"></strong></div><div class="confidence-track"><div id="confidence-fill"></div></div>
+          <div class="score-row"><span>Hotdog score</span><span id="hotdog-score"></span></div>
+          <p class="uncertainty-note" id="uncertainty-note" hidden>Ambiguous image. The score is uncertain or near the decision boundary; try a clearer photo.</p>
+          <div id="gradcam-section" class="gradcam-section" hidden><div class="gradcam-heading"><span>A peek at its attention</span><span class="tag">GRAD-CAM</span></div><img id="gradcam-image" alt="Grad-CAM heatmap over the center crop seen by the model"><p>Warmer colors highlight regions influencing this prediction. Shown on the model’s center crop.</p></div>
+          <div class="result-footer"><span><span class="live-dot"></span> MobileNetV2</span><span id="inference-time"></span></div>
+          <p class="score-disclaimer">A model score is not a guarantee. Unfamiliar images can still receive confident predictions.</p>
+        </div>
+      </div>
+    </section>
+    <div class="pipeline-strip"><span class="strip-label">FROM PIXELS TO PREDICTION</span><span>Resize & normalize</span><span class="strip-arrow">→</span><span>MobileNetV2</span><span class="strip-arrow">→</span><span>One delicious decision</span><span class="strip-end">224 × 224 · RGB</span></div>
+    <section class="evaluation-section" id="evaluation">
+      <div class="section-heading"><div><div class="eyebrow">NO SECRET INGREDIENTS</div><h2>A look under the hood.</h2></div><p>Trained in two stages. Evaluated on held-out images.<br>Every number here comes from the saved test report.</p></div>
+      <div class="metric-grid"><div><span>ACCURACY</span><strong id="metric-accuracy">—</strong><small>Correct overall</small></div><div><span>PRECISION</span><strong id="metric-precision">—</strong><small>When it says “hotdog”</small></div><div><span>RECALL</span><strong id="metric-recall">—</strong><small>Hotdogs it finds</small></div><div><span>F1 SCORE</span><strong id="metric-f1">—</strong><small>Precision meets recall</small></div></div>
+      <p class="test-note" id="test-note">Loading the held-out evaluation report…</p>
+      <details class="report-details"><summary>See the confusion matrix & training curves <span aria-hidden="true">+</span></summary><div class="plot-grid"><figure><img src="/api/plots/confusion_matrix" alt="Test confusion matrix; rows are actual labels, columns are predicted labels" loading="lazy"><figcaption>Where the model gets it right—and where it doesn’t.</figcaption></figure><figure><img src="/api/plots/training_curves" alt="Training and validation loss and accuracy across both training stages" loading="lazy"><figcaption>Learning the head first, then fine-tuning the backbone.</figcaption></figure></div></details>
+      <div class="method-grid"><article><span>01 / LEARN</span><h3>A head start from ImageNet.</h3><p>A pretrained MobileNetV2 extracts visual features. We train a binary classification head, then fine-tune the final backbone blocks.</p></article><article><span>02 / CHECK</span><h3>Keep the test set honest.</h3><p>Detected duplicates stay out of separate splits. Checkpoint selection and threshold tuning use validation data, never test labels.</p></article><article><span>03 / QUESTION</span><h3>Curiosity over certainty.</h3><p>Grad-CAM offers a view of influential regions. It can’t prove reasoning, and a two-class model can be wrong about unfamiliar food.</p></article></div>
+    </section>
+  </main>
+  <footer class="wrap footer"><span class="wordmark footer-brand">seefood<span class="brand-period">.</span></span><span>A little food for thought.</span><div><a href="https://github.com/AyushPatra45/SeeFood" target="_blank" rel="noreferrer">Source code ↗</a><a href="/docs">API docs ↗</a></div></footer>
+</body>
+</html>
